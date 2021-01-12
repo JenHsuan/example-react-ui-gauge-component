@@ -1,17 +1,36 @@
 //Types
 import {
-    GET_USERS,
-    GET_DATA
+    GET_RANDOM_NUMBERS,
+    GET_RANDOM_OFFSETS
 } from '../types';
 
 //Actions
 
 //The example for a synchronous action
-export const getData = () => dispatch => {
+
+const maxNumber = 100;
+const offsetNumber = 20;
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+export const getRandomNumbers = () => dispatch => {
     try {
         dispatch({
-            type: GET_DATA,
-            payload: {data: 'Test component'}
+            type: GET_RANDOM_NUMBERS,
+            payload: {randomNumbers: [getRandomInt(maxNumber), getRandomInt(maxNumber), getRandomInt(maxNumber), getRandomInt(maxNumber)]}
+        });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export const getRandomOffsets = () => dispatch => {
+    try {
+        dispatch({
+            type: GET_RANDOM_OFFSETS,
+            payload: {randomOffsets: [getRandomInt(offsetNumber), getRandomInt(offsetNumber), getRandomInt(offsetNumber), getRandomInt(offsetNumber)]}
         });
     } catch (error) {
         console.log(error);

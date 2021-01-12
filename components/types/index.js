@@ -1,2 +1,2 @@
-export const GET_DATA = 'GET_DATA';
-export const GET_USERS = 'GET_USERS';
+export const GET_RANDOM_NUMBERS = 'GET_RANDOM_NUMBERS';
+export const GET_RANDOM_OFFSETS = 'GET_RANDOM_OFFSETS';

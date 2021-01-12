@@ -1,9 +1,9 @@
 //Initial states
 export const initialState = {
-    users:[],
-    data: ''
+    randomNumbers:[0, 0, 0, 0],
+    randomOffsets:[0, 0, 0, 0]
 };
 
 //Selector functions
-export const selectData = rootState => rootState.templateReducer.data;
-export const selectUsers = rootState => rootState.templateReducer.users;
+export const selectRandomNumbers = rootState => rootState.templateReducer.randomNumbers;
+export const selectRandomOffsets = rootState => rootState.templateReducer.randomOffsets;

@@ -9,3 +9,25 @@ export const TemplateStyle = styled('div')(
       },
     })
 );
+
+export const LayoutStyle = styled('div')(
+  variant({
+    scale: 'layout',
+    variants: {
+      main: {}
+    },
+  })
+);
+
+export const GaugeStyle = styled('div')(
+  variant({
+    scale: 'gauge',
+    variants: {
+      leftTop: {},
+      leftBotton: {},
+      rightTop: {},
+      rightBotton: {},
+      one:{}
+    },
+  })
+);
